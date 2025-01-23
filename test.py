@@ -29,6 +29,6 @@ if arduino:
 json_object = json.dumps(test_data)
  
 # Writing to sample.json
-with open("results.json", "w") as outfile:
+with open("build/results.json", "w") as outfile:
     outfile.write(json_object)
             
