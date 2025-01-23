@@ -15,10 +15,10 @@ def write_read(x):
 while True:
     value = write_read("Test") 
     print("Test1", value)
-    test_data['Test1'] = value.decode() 
+    test_data['Test1'] = value.decode('utf-8') 
     value = write_read("TEs")
     print("Test2", value)
-    test_data['Test2'] = value.decode() 
+    test_data['Test2'] = value.decode('utf-8') 
     if test_data['Test1'] and test_data['Test2']:
         break
 
