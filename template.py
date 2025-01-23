@@ -1,5 +1,5 @@
 from jinja2 import Environment, FileSystemLoader
-import json
+import json, os
 
 env = Environment(loader = FileSystemLoader('templates'))
 template = env.get_template('doc_test_report.tex.j2')
@@ -12,5 +12,9 @@ with open(data_file, 'r') as file:
 
 output = template.render(data)
 
-with open("doc/test_report/doc_test_report.tex", 'w') as f:
+out_dir = "build/test_report"
+if not os.path.exists(out_dir):
+    os.makedirs(out_dir)
+
+with open("build/test_report/doc_test_report.tex", 'w') as f:
     f.write(output)
