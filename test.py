@@ -14,17 +14,18 @@ def write_read(x):
 
 while True:
     value = write_read("Test") 
-    print("test1", value)
-    test_data['test1'] = value.decode() 
+    print("Test1", value)
+    test_data['Test1'] = value.decode() 
     value = write_read("TEs")
-    print("test2", value)
-    test_data['test2'] = value.decode() 
-    if test_data['test1'] and test_data['test2']:
+    print("Test2", value)
+    test_data['Test2'] = value.decode() 
+    if test_data['Test1'] and test_data['Test2']:
         break
 
 if arduino:    
     arduino.close()
         
+test_data = {"Tests" : test_data}
 # Serializing json
 json_object = json.dumps(test_data)
  

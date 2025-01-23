@@ -29,8 +29,9 @@ This is the first sub-section.
 \begin{center}
     \begin{tabular}{||c | c ||}  \hline
         Test Name & Result \\ \hline\hline
-        Test1 & Pass \\  \hline
-        Test2 & Failed \\ \hline
+        {% for key, value in Tests.items() %}
+            {{key}} & {{value}} \\ \hline
+        {% endfor %}
    \end{tabular}
 \end{center}
 
