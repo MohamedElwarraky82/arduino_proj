@@ -13,17 +13,24 @@ void test1(){
   assert_equal("Test1", x, y);
 }
 
-void test3(){
-  int x = 5;
-  int y = 5;
-  assert_not_equal("Test3", x, y);
-}
-
 void test2(){
   int x = 5;
   int y = 6;
   assert_not_equal("Test2", x, y);
 }
+
+void test3(){
+  int x = 5;
+  int y = 7;
+  assert_not_equal("Test3", x, y);
+}
+
+void test4(){
+  int x = 5;
+  int y = 5;
+  assert_equal("Test4", x, y);
+}
+
 
 void setup() { 
 	serial_init();
@@ -33,7 +40,8 @@ void setup() {
 void loop() { 
   test1();
   test2();
-  // test3();
+  test3();
+  test4();
   end_test();
   return;
 } 
