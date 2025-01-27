@@ -13,11 +13,11 @@ void test1(){
   assert_equal("Test1", x, y);
 }
 
-// void test2(){
-//   int x = 5;
-//   int y = 5;
-//   assert_not_equal("Test2", x, y);
-// }
+void test3(){
+  int x = 5;
+  int y = 5;
+  assert_not_equal("Test3", x, y);
+}
 
 void test2(){
   int x = 5;
