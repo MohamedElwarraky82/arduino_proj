@@ -1,12 +1,13 @@
 \documentclass[12pt, letterpaper]{report}
-\title{Test Repor}
-\author{Learn In Depth}
-
 \begin{document}
 
-\textit{\large\title} \\
-\textit{\large\author}\\
-{\large\today}
+\begin{titlepage}
+    \begin{center}
+       \Large\textbf{Test Report}\\
+       \large\textit{A. Mohamed Elwarraky}\\
+       \large\today
+    \end{center}
+\end{titlepage}
 
 \newpage
 
@@ -29,11 +30,9 @@ This is the first sub-section.
 \begin{center}
     \begin{tabular}{||c | c ||}  \hline
         Test Name & Result \\ \hline\hline
-        
-            test1 & Passed \\ \hline
-        
-            test2 & Failed \\ \hline
-        
+        {% for key, value in Tests.items() %}
+            {{key}} & {{value}} \\ \hline
+        {% endfor %}
    \end{tabular}
 \end{center}
 
