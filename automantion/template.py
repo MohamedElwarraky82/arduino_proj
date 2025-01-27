@@ -1,7 +1,7 @@
 from jinja2 import Environment, FileSystemLoader
 import json, os
 
-env = Environment(loader = FileSystemLoader('templates'))
+env = Environment(loader = FileSystemLoader('automantion/templates'))
 template = env.get_template('doc_test_report.tex.j2')
 
 data_file = "build/results.json"
