@@ -26,8 +26,8 @@ void test3(){
 }
 
 void test4(){
-  int x = 5;
-  int y = 5;
+  int x = 3;
+  int y = 3;
   assert_equal("Test4", x, y);
 }
 
